@@ -14,7 +14,7 @@ if uploaded_file is not None:
 
     data = []
 
-    for line in lines[1]:
+    for line in lines[1:50]:
         data.append(set( [ data for data in line.decode('latin-1').split(";") ] ))
 
     st.table(pd.DataFrame(data,columns=header))
